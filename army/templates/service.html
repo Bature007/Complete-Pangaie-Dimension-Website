@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Services{% endblock title %}
+    
+    {% block body %}
+
+    <div class="container bg-grey pt-20 ">
+        <h4 class="text-black text-center font-bold text-2xl">Our Services</h4>
+        <h1 class="text-center pt-2">Creating Sustainable Spaces</h1>
+        <p class="text-center pt-1">
+            Transformin landscapes into eco-conscious havens with sustainable designs and
+            green building practices.
+        </p>
+        <div class="row pt-4">  
+            {% for blog in blogs %}
+         
+                <div class="w-full md:w-1/2 lg:w-1/3 pt-4 pb-4">
+  <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+    <a href="{% url 'singlepage' blog.pk %}">
+      <img src="{{ blog.image.url }}" alt="..." class="w-full h-64 object-cover">
+    </a>
+    <div class="p-4">
+        <h1>{{blog.id}}</h1>
+      <h3 class="text-xl font-semibold mb-2">{{ blog.title }}</h3>
+      <p class="text-gray-700 text-sm">
+        {{ blog.post|truncatechars:200 }}
+        <a href="{% url 'singlepage' blog.pk %}" class="text-blue-500 inline-block ml-1">
+          <i class="bi bi-chevron-double-right"></i>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+            {% endfor %}
+        </div>
+    </div>
+        
+    {% endblock body %}
+        

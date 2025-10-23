@@ -1,0 +1,64 @@
+<!-- contact.html -->
+ 
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block body %}
+<div class="container">
+<section class="contact-section">
+
+  
+  
+  </div>
+</section>
+<div class="flex divide-x divide-gray-300">
+  <div class="px-4 ">
+    <h4 class="green-text">GET IN TOUCH</h4>
+    <h2>Let's build a sustainable future together</h2>
+    <p>Reach out to us today to start your journey towards a greener and more sustainable tomorrow.</p>
+
+    
+
+      <form method="POST" >
+        {% csrf_token %}
+         {{ forms|crispy}}
+        <button 
+          type="submit" 
+          class="w-full py-2 rounded-md bg-green-400 hover:bg-white-800 transition duration-300 font-bold">
+          Submit Request
+        </button>
+      </form>
+
+  </div>
+
+  <div class="px-4">
+       <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29206.89900172883!2d-88.2554971!3d43.0116784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88050802b2c73895%3A0xdecff177f3d62a5d!2sWaukesha%2C%20WI%2053186%2C%20USA!5e0!3m2!1sen!2sus!4v1661011658416!5m2!1sen!2sus"
+      width="1000"
+      height="700"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <div class="info">
+      <p class="mt-8"><strong>Get in touch:</strong> <i class="bi bi-airplane-engines"></i>
+        <a href="mailto:profjabb@yahoo.com">profjabb@yahoo.com</a></p>
+       
+      <p class="mt-2"><strong>Location: </strong>Waukesha, WI US</p>
+      
+
+      <p class="my-2"><strong>Hours:</strong>       
+      
+        Monday – Friday: 9:00am – 10:00pm
+      </p>
+
+    </div>
+  </div>
+ 
+</div>
+
+</div>
+{% endblock %}
+    

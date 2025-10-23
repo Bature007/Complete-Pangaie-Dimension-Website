@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ post.title }}
+{% endblock title %}
+
+{% block body %}
+<div class="max-w-6xl mx-auto px-4 py-20">
+  <div class="grid md:grid-cols-2 gap-10 items-start">
+    <div>
+      <img src="{{ post.image.url }}" alt="{{ post.title }}" class="w-full h-auto rounded-lg shadow-md object-cover">
+    </div>
+    <div>
+      <h1 class="text-3xl font-bold mb-4 text-gray-800 text-center md:text-left">{{ post.title }}</h1>
+      <div class="prose max-w-none text-gray-700">
+        {{ post.post|safe }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--     
+    <div class="container">
+        <div>
+            <h4> Pangaea Dimensions </h4>
+            <h1>BUILDING SUSTAINABLE COMMUNICATION FOR THE FUTURE</h1>
+        </div>
+        <section class="secdiv">
+            <div class="headings">
+                <H2>WHO WE ARE</H2>
+                    <P> 
+                        At Pangaea Dimensions we 
+                        specialize in developing 
+                        sustainable, affordable, livable, 
+                        and attainable residential and 
+                        mixed-use communities. 
+                        Our mission is to transform 
+                        neighborhoods with purpose 
+                        built housing that meet the real 
+                        needs of today's families, 
+                        workers, and communities.
+                    </P>
+
+                <h2>WHAT WE DO</h2>
+                    <P>
+                        <ul>
+                            <li> * WORKFORCE HOUSING:
+                                High­quality, energy efficient homes 
+                                designed for essential workers and 
+                                moderate-income families.</li>
+                            <li> * MIXED-USE DEVELOPMENTS: 
+                                Integrated spaces that combine 
+                                housing, retail, and community 
+                                amenities for vibrant, walkable 
+                                neighborhoods.</li>
+                            <li>* SUSTAINABLE DESIGN: We 
+                                prioritize green building standards 
+                                like Net-Zero Energy, solar 
+                                integration, and water conservation.</li>
+                            <li>* AFFORDABLE LIVING: Thoughtful 
+                                design and strategic planning allow 
+                                us to deliver cost-effective solutions 
+                                without sacrificing comfort or 
+                                quality.
+                                comfort or quality</li>
+                        </ul>
+                    </P>
+            </div>
+            <div>
+                <img src="{% static 'images/house.jpeg' %}" alt="">
+                <h1>WHY CHOOSE US</h1>
+                <P>
+                    
+                </P>
+                <h4>Contact Us</h4>
+                <p>jodogba@Pangaeadimensions.com</p>
+                <p>234836503</p>
+            </div>
+        </section>
+    </div> -->
+{% endblock body %}

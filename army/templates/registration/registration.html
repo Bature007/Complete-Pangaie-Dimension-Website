@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    
+{% endblock title %}
+
+{% block body %}
+<style>
+    .form-wrapper {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        font-family: sans-serif;
+    }
+
+    .form-wrapper input,
+    .form-wrapper textarea,
+    .form-wrapper select {
+        width: 100%;
+        padding: 8px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .form-wrapper button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .form-wrapper button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<div class="form-wrapper">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="bg-green-400">Submit</button>
+        <a href="{% url 'login' %}"> Already Have Account Login</a>
+    </form>
+</div>
+{% endblock body %}
+    

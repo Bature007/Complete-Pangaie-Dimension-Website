@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block body %}
+<div class="max-w-2xl mx-auto mt-10 bg-white shadow-md rounded-lg p-8">
+  <form method="post" enctype="multipart/form-data" class="space-y-6">
+    {% csrf_token %}
+    {{ form.as_p }}
+  <button type="submit" class="bg-green-400">Update</button>
+  </form>
+</div>
+{% endblock body %}
+    
+    

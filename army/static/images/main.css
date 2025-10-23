@@ -1,0 +1,96 @@
+/* styles.css */
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+} */
+
+/* .nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+.nav-links .btn {
+  border: 1px solid #222;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+}
+
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem 5%;
+}
+
+.contact-form h2 {
+  margin: 0.5rem 0;
+}
+
+.green-text {
+  color: green;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.submit-btn {
+  background: green;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.map-placeholder {
+  background: #f0f0f0;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1rem;
+  background: #f8f8f8;
+  border-top: 1px solid #ddd;
+} */

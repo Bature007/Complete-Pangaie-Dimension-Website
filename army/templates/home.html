@@ -1,0 +1,265 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}home{% endblock title %}
+
+{% block body %}
+<div class="relative w-full h-screen overflow-hidden">
+    <!-- Carousel Background Images -->
+    <div class="absolute inset-0 z-0">
+        <div class="w-full h-full">
+            <div class="w-full h-full relative">
+                <div class="absolute inset-0 transition-opacity duration-1000 opacity-100 bg-cover bg-center bg-no-repeat carousel-image" style="background-image: url('{% static 'images/hsflin.jpg' %}')"></div>
+                <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 bg-cover bg-center bg-no-repeat carousel-image" style="background-image: url('{% static 'images/narrowhouse.jpg' %}')"></div>
+                <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 bg-cover bg-center bg-no-repeat carousel-image" style="background-image: url('{% static 'images/whitebrown.jpg' %}')"></div>
+                <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 bg-cover bg-center bg-no-repeat carousel-image" style="background-image: url('{% static 'images/walkings.jpg' %}')"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Foreground Content -->
+    <div class="relative z-10 flex flex-col md:flex-row items-center justify-between h-full px-6 md:px-10 bg-black bg-opacity-50">
+        <div class="text-white max-w-xl py-12 md:py-0">
+            <h5 class="text-green-500 text-lg mb-4">SUSTAINABLE REAL ESTATE DEVELOPMENT</h5>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Building green for a better tomorrow</h1>
+            <p class="mb-6 text-sm md:text-base">
+                Pangaea Dimensions, located in Waukesha, specializes in the development of sustainable 
+                built environments that incorporate green building elements to create a healthier future for all.
+            </p>
+            <a href="{% url 'about' %}">
+                <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded">
+                    Get In Touch
+                </button>
+            </a>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex space-x-3 mt-8 md:mt-0">
+            <button id="prevSlide" class="bg-white bg-opacity-30 hover:bg-opacity-50 text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center">
+                &larr;
+            </button>
+            <button id="nextSlide" class="bg-white bg-opacity-30 hover:bg-opacity-50 text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center">
+                &rarr;
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="flex">
+    <div class="w-1/3 bg-white">
+        <p>
+            <h1>Why Choose Us</h1>
+        </p>
+    </div>
+</div> -->
+  </div>
+
+  <!-- Right 2/3 with carousel -->
+  <div class="w-2/3 relative overflow-hidden mt-0">
+    <!-- <div  carousel-image" style="background-image: url('{% static 'images/walkings.jpg' %}')"></div> -->
+    <!-- Carousel wrapper -->
+    <div id="carousel" class="flex transition-transform duration-500">
+        
+      <!-- <img src=" url ('{% static 'images/homeback.jpg' %}')" class="w-full flex-shrink-0 object-cover" />
+      <img src=" url ('{% static 'images/hsflin.jpg' %}')" class="w-full flex-shrink-0 object-cover" />
+      <img src=" url ('{% static 'images/narrowhouse.jpg' %}')" class="w-full flex-shrink-0 object-cover" />
+      <img src=" url ('{% static 'images/whitebrown.jpg' %}')" class="w-full flex-shrink-0 object-cover" />
+      <img src=" url ('{% static 'images/walkings.jpg' %}')" class="w-full flex-shrink-0 object-cover" />
+      <img src=" url ('{% static 'images/water.jpg' %}')" class="w-full flex-shrink-0 object-cover" />
+    </div> -->
+    <div class="absolute inset-0 transition-opacity duration-1000 opacity-100 bg-cover bg-center bg-no-repeat carousel-image" style="background-image: url('{% static 'images/hsflin.jpg' %}')"></div>
+                <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 bg-cover bg-center bg-no-repeat carousel-image" style="background-image: url('{% static 'images/narrowhouse.jpg' %}')"></div>
+                <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 bg-cover bg-center bg-no-repeat carousel-image" style="background-image: url('{% static 'images/whitebrown.jpg' %}')"></div>
+                <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 bg-cover bg-center bg-no-repeat carousel-image" style="background-image: url('{% static 'images/walkings.jpg' %}')"></div>
+    </div>
+
+    <!-- Controls -->
+    <button id="prev" class="absolute top-1/2 left-4 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full">
+      ‹
+    </button>
+    <button id="next" class="absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full">
+      ›
+    </button>
+  </div>
+</div>
+</div>
+
+  
+  <!-- Container -->
+  <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-3 gap-8 mb-6">
+
+    <!-- Left Column -->
+    <div class="lg:col-span-2 space-y-6 mb-6">
+      <!-- Heading -->
+ 
+
+      <!-- Intro -->
+      <p class="text-black-700 ">
+       <STRONG> Our Services </STRONG>
+      </p>
+
+      <!-- Info Grid -->
+      <div class="grid sm:grid-cols-2 gap-8">
+
+        <!-- Job Opportunities -->
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
+          <h3 class="font-bold text-black-800 mb-2">Core Services</h3>
+          <p class="text-sm text-gray-600">
+            <ul>
+                <li>Residential, commercial, mixed-use development</li>
+                <li>Property acquisition and planning</li>
+                <li>Project management and construction</li>
+                <li>Sustainability and green building practices</li>
+            </ul>
+          </p>
+        </div>
+
+        <!-- Skill Potential -->
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
+          <h3 class="font-bold text-gray-800 mb-2">Our Expertise</h3>
+          <p class="text-sm text-gray-600">
+            <ul>
+                <li>Residential (Luxury,multi-family,mixed-use)</li>
+                <li>Commercial (office, retail,industrial)</li>
+                <li>Special projects(healthcare,education,hospitality)</li>
+            </ul>
+          </p>
+        </div>
+
+        <!-- Income Potential -->
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
+          <h3 class="font-bold text-gray-800 mb-2">End To End Services</h3>
+          <p class="text-sm text-gray-600">
+            Land acuisition-> Design & Planning ->Construction-> Asset management
+          </p>
+        </div>
+
+        <!-- Recommended -->
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-700">
+          <h3 class="font-bold text-gray-800 mb-2">SUSTAINABLE DESIGN</h3>
+          <p class="text-sm text-gray-600">
+             We prioritize green building standards like Net-Zero Energy, solar integration, and water conservation.
+          </p>
+        </div>
+        
+      </div>
+      <H5><STRONg>WHY CHOOSE US</STRONg></H5>
+      <div class="grid sm:grid-cols-2 gap-8">
+
+        <!-- Job Opportunities -->
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
+          <h3 class="font-bold text-black-800 mb-2">YOU FIRST</h3>
+          <p class="text-sm text-gray-600">
+                Communityfirst development approach Experience in urban infill, rural, and suburban projects Commitment to long term livability and environmental impact
+          </p>
+        </div>
+
+        <!-- Skill Potential -->
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
+          <h3 class="font-bold text-gray-800 mb-2">AFFORDABLE LIVING</h3>
+          <p class="text-sm text-gray-600">
+             Thoughtful design and strategic planning allow us to deliver cost-effective solutions without sacrificing comfort or quality. comfort or quality
+          </p>
+        </div>
+
+
+        
+      </div>
+    </div>
+
+
+
+    <!-- Right Column (Form) -->
+    <div class="bg-white-400 text-black border-green-500 p-8 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-semibold mb-6">
+        Request <span class="text-green-500">Information</span>
+      </h2>
+
+      <!-- templates/contact/contact_form.html -->
+<form method="POST" >
+  {% csrf_token %}
+  {{ forms|crispy}}
+  <button 
+    type="submit" 
+    class="w-full py-3 rounded-md bg-green-500 text-white hover:bg-green-600 transition duration-300 font-semibold">
+    Submit Request
+  </button>
+</form>
+
+
+    </div>
+  </div>
+
+
+<script>
+    const slides = document.querySelectorAll('.carousel-image');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.opacity = i === index ? '1' : '0';
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    document.getElementById('nextSlide').addEventListener('click', nextSlide);
+    document.getElementById('prevSlide').addEventListener('click', prevSlide);
+
+    setInterval(nextSlide, 3000);
+    showSlide(currentSlide);
+
+
+
+
+//   const carousel = document.getElementById("carousel");
+//   const slide = carousel.children.length;
+//   let index = 0;
+//   let interval;
+
+//   function showSlide(i) {
+//     index = (i + slide) % slide; // wrap around
+//     carousel.style.transform = translateX(-${index * 100}%);
+//   }
+
+//   function nextSlide() {
+//     showSlide(index + 1);
+//   }
+
+//   function prevSlide() {
+//     showSlide(index - 1);
+//   }
+
+//   // Button events
+//   document.getElementById("next").addEventListener("click", () => {
+//     nextSlide();
+//     resetAutoPlay();
+//   });
+
+//   document.getElementById("prev").addEventListener("click", () => {
+//     prevSlide();
+//     resetAutoPlay();
+//   });
+
+//   // Auto play every 3s
+//   function startAutoPlay() {
+//     interval = setInterval(nextSlide, 3000);
+//   }
+
+//   function resetAutoPlay() {
+//     clearInterval(interval);
+//     startAutoPlay();
+//   }
+
+//   startAutoPlay();
+</script>
+
+{% endblock body %}

@@ -1,0 +1,31 @@
+{% extends 'admindashboard.html' %}
+{% load static %}
+
+
+
+{% block dashboard %}
+    <table class="table table-bordered mt-10">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Email</th>
+        <th>message</th>
+        <!-- <th>Date</th> -->
+        <th colspan="2" class="text-center">Action</th>
+    </tr>   
+    {% for i in contact %}
+    <tr>
+     
+        <td>{{i.id}}</td>
+        <td>{{ i.fullname }}</td>
+        <td>{{ i.email }}</td>
+        <td>{{ i.message|truncatechars:100 }}</td>
+        <td><a href="{% url 'update' i.pk %}" class="btn btn-primary" >Update</a></td>
+        <td><form action="{% url 'delete_post' i.pk %}" method="post" > {% csrf_token %}<button class="btn btn-danger">delete</button></form></td>
+       
+    </tr>    
+     {% endfor %}
+</table>
+
+{% endblock dashboard %}
+    
