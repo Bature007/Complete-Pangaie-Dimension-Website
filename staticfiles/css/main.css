@@ -1,0 +1,148 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* color: #222; */
+  background: #faf9f9;
+}
+
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    background-color: #202C45;
+}
+.navbar-brand{
+    margin-left: 155px;
+    margin-right: 550px;
+}
+nav ul li a{
+    border-radius: 5px;
+    /* color: white; */
+    text-decoration: none;
+    transition: 0.3s;
+    
+}
+/* nav a:hover{
+    background-color: #555;
+    color: #faf9f9;
+
+    
+} */
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  padding: 2rem 5%;
+  padding-top: 30px;
+}
+.secdiv{
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  gap:2rem;
+  padding: 2rem 5%;
+}
+.contact-form h2 {
+  margin: 0.5rem 0;
+  border-radius: 50px;
+}
+.green-text {
+  color: green;
+  font-weight: bold;
+  padding-top: 50px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.submit-btn {
+  background: green;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input, textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.mlogo {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.3rem;
+}
+.home-section{
+    /* margin-top: 60px; */
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    padding: 2rem 5%;
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+.home-two{
+    height: 450px;
+    width: 20px;
+    padding-top: 60px;
+
+}
+.home-one{
+    padding-top: 100px;
+}
+/* body.home{
+    /* background: url("../images/house.jpeg") no-repeat center/cover; */
+    /* background-image: url("../images/house.jepg");
+    background-size: cover;
+    background-position: center;
+    padding-left: 50px;
+} */ */
+.container bg-gray{
+    padding-top: 50px;
+}
+.text-success{
+    padding-top: 70px;
+}
+.map-placeholder{
+    padding-top: 50px;
+}
+/* .home{
+    padding-left: 50px;
+    padding-top: 800px; */
+
+.about{
+    background-image: url("../images/homeback.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* z-index: 2; */
+    padding-bottom: 100px;
+    margin-left: 55px;
+    margin-bottom: 50px;
+}
+.rabout{
+  padding-top: 250px;
+  padding-bottom: 100px;
+}
+.h1{
+    border: #555 1px solid;
+    border-radius: 2px;
+    padding-left: 10px;
+    text-transform: capitalize;
+}
+.conol{
+  padding-left: 150px;
+
+}
